@@ -134,7 +134,7 @@ export function test-parser-many-of(test)
     # LEX:
     ast = []
     test.throws !->
-      parse(AnyOfParser, ast)
+      parse(ManyOfParser, ast)
 
   let
     # LEX: 5
