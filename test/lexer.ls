@@ -51,7 +51,8 @@ export function test-lexer-many(test)
 export function test-lexer-fail(test)
   rules = []
 
-  test.throws -> lex(rules, 'anything')
+  test.throws ->
+    lex(rules, 'anything')
 
   test.done!
 
