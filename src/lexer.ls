@@ -4,7 +4,7 @@
  * @param Array<Array<String>> patterns
  *  formatted as is: [ [ regexp, name ], ... ]
  */
-module.exports = (patterns, code) ->
+module.exports = (patterns, code) -->
   tokens = []
   :code while code
     code -= /^ +/ # skip whitespace
