@@ -9,10 +9,12 @@ module.exports = class Parser
       @error "Expected token #it, found #type"
     token
 
+  run: -> @"parse#{ucfirst it}"!
+
   maybe: ->
     tokens = [...@tokens] # dup
     try
-      @"parse#{ucfirst it}"!
+      @run it
     catch
       @ <<< {tokens}
       false
@@ -25,7 +27,7 @@ module.exports = class Parser
   any-of: ->
     [that while @maybe it]
 
-  many-of: -> [@maybe it; ...@any-of it]
+  many-of: -> [@run it; ...@any-of it]
 
   parse: -> ...
 
