@@ -9,7 +9,7 @@ module.exports = (patterns, code) -->
   :code while code
     code -= /^ +/ # skip whitespace
 
-    # extract source property of the regexp to interpole it
+    # extract source property of the regexp to interpolate it
     for [{source}, type] in patterns when code is //^(#{source})//
       value = that.1
       tokens.push {type, value}
