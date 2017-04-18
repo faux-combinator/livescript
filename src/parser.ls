@@ -1,4 +1,4 @@
-ucfirst = -> it[0].toUpperCase() + it.slice(1)
+ucfirst = -> it.0.toUpperCase! + it.slice 1
 
 module.exports = class Parser
   (@tokens) ->
