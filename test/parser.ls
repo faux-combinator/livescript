@@ -45,8 +45,8 @@ export function test-parser-maybe(test)
   let
     # LEX: ()
     ast = [lparen-token, rparen-token]
-    #test.deep-equal parse(MaybeParser, ast), true,
-    #  "can still parse basic stuff"
+    test.deep-equal parse(MaybeParser, ast), true,
+      "can still parse basic stuff"
 
   let
     # LEX: (a)
